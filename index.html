@@ -59,7 +59,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-02-07 11:54:14',
+  postUpdate: '2024-02-08 12:48:32',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -252,9 +252,9 @@ if (true) {
 输出格式单独的一行,包含那个可能得到的最大的和。
 输入 ：573 88 1 02 7 4 44 5 2 6 5 
 输出 ：30
-分析：
+分析：（自底向上法）
 
-代码实现(c++):1234567891011121314151617181920#include &lt;iostream&gt;using namespace std;const int N = 1010;int r;int f[N][N];int main()&#123;    cin &gt;&gt; r;    for(int i = 1;i &lt;= r;i ++)&#123;        for(int j = 1;j &lt;= i;j ++)&#123;            cin &gt;&gt; f[i][j];   ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">计算机</div><a class="unvisited-post" href="/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Vue3-Vuex的缺点和解决方法">未读</a></div><a class="article-title" href="/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Vue3-Vuex的缺点和解决方法">Vue3-Vuex的缺点和解决方法</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-01T06:01:19.000Z" title="发表于 2023-10-01 14:01:19">2023-10-01</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/vue/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vue</span></a></span></div><div class="content">Vue3-Vuex的缺点和解决方法引言
+代码实现(c++):1234567891011121314151617181920#include &lt;iostream&gt;using namespace std;const int N = 1010;int r;int f[N][N];int main()&#123;    cin &gt;&gt; r;    for(int i = 1;i &lt;= r;i ++)&#123;        for(int j = 1;j &lt;= i;j ++)&#123;            cin &gt;&gt; f[i ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">计算机</div><a class="unvisited-post" href="/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Vue3-Vuex的缺点和解决方法">未读</a></div><a class="article-title" href="/2023/10/01/Vue3-Vuex%E7%9A%84%E7%BC%BA%E7%82%B9%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="Vue3-Vuex的缺点和解决方法">Vue3-Vuex的缺点和解决方法</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-01T06:01:19.000Z" title="发表于 2023-10-01 14:01:19">2023-10-01</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/vue/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>vue</span></a></span></div><div class="content">Vue3-Vuex的缺点和解决方法引言
 在使用 Vue 开发项目的时候，我们经常会利用 Vuex 来进行全局的状态管理从而达到实现数据全局共享的目的
 但是使用 Vuex 有一个缺点就是在页面刷新之后数据会消失从而使页面展示异常或者请求接口报错
 因为用户刷新页面是不可控的因素，这个时候我们就要结合本地存储来保证数据的存储。
